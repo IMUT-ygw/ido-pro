@@ -3,6 +3,12 @@ spring:
     name: cloud-provider-8080
 eureka:
   client:
-    service-url.defaultZone: http://localhost:9001/eureka
+    #注册集群用逗号分隔
+    service-url.defaultZone: http://eureka9001:9001/eureka,http://eureka9002:9002/eureka
+  instance:
+    #每间隔2s想服务端发送一次心跳
+    lease-renewal-interval-in-seconds: 2
+    #告诉服务器10之内没发送心跳将我剔除
+    lease-expiration-duration-in-seconds: 10
 server:
   port: 8080

@@ -15,6 +15,8 @@ public class TestController {
     @GetMapping("test")
     public String test(){
        //get方式   返回值类型为String
-       return restTemplate.getForEntity("http://localhost:8080/test",String.class).getBody();
+       //return restTemplate.getForEntity("http://localhost:8080/test",String.class).getBody();
+
+       return restTemplate.getForEntity("http://CLOUD-PROVIDER-8080/test",String.class).getBody();
     }
 }

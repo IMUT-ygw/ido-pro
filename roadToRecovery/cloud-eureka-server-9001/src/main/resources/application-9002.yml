@@ -1,0 +1,15 @@
+server:
+  port: 9002
+eureka:
+  instance:
+    hostname: eureka9002 #修改host文件映射
+  client:
+    #拒绝自己对自己注册
+    register-with-eureka: false
+    #自己就是个注册中心，不会去检索其他服务
+    fetch-registry: false
+    #注册中心服务端注册地址
+    service-url.defaultZone: http://eureka9001:9001/eureka/
+#  关闭自我保护模式
+#  server:
+#    enable-self-preservation: false
