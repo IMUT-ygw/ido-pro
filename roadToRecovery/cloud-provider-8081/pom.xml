@@ -9,41 +9,14 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.ido</groupId>
-    <artifactId>cloud-consumer-80</artifactId>
+    <artifactId>cloud-provider-8081</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>cloud-consumer-80</name>
+    <name>cloud-provider-8081</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>
-        <fastJson.version>1.2.75</fastJson.version>
-        <cloud.version>Hoxton.SR12</cloud.version>
-        <jwt.version>3.4.0</jwt.version>
-        <mysql.verison>8.0.26</mysql.verison>
-        <mybatis-plus.version>3.4.0</mybatis-plus.version>
-        <mybatis-plus-start.version>3.0.5</mybatis-plus-start.version>
     </properties>
     <dependencies>
-
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.auth0</groupId>
-            <artifactId>java-jwt</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -75,36 +48,11 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>${mybatis-plus-start.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${cloud.version}</version>
+                <version>Hoxton.SR12</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>${fastJson.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.auth0</groupId>
-                <artifactId>java-jwt</artifactId>
-                <version>${jwt.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>${mysql.verison}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus</artifactId>
-                <version>${mybatis-plus.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

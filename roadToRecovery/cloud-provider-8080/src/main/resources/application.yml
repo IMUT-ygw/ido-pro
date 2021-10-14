@@ -1,6 +1,6 @@
 spring:
   application:
-    name: cloud-provider-8080
+    name: cloud-provider
 eureka:
   client:
     #注册集群用逗号分隔
